@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const usuarios = require("./routes/usuarios")
-const documentacion = require("./routes/api-doc")
 require("dotenv").config();
 
 const app = express();
@@ -10,7 +9,6 @@ const port = 9000;
 //middlelware
 app.use(express.json());
 app.use("/api", usuarios);
-app.use("/docs", documentacion);
 
 //rutas
 app.get('/', (req, res) => {
